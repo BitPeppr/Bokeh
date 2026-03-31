@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>5A8CB5E5-8DD5-4660-A7C5-C97EEE407D82</key>
+		<key>6251031D-C224-4849-9E2B-BBE4C93E4891</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>5A8CB5E5-8DD5-4660-A7C5-C97EEE407D82.xcactivitylog</string>
+			<string>6251031D-C224-4849-9E2B-BBE4C93E4891.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -40,13 +40,13 @@
 			<key>signature</key>
 			<string>Building project EyeRest with scheme EyeRest and configuration Release</string>
 			<key>timeStartedRecording</key>
-			<real>796647532.12828803</real>
+			<real>796647928.31851399</real>
 			<key>timeStoppedRecording</key>
-			<real>796647594.49442804</real>
+			<real>796647988.74886596</real>
 			<key>title</key>
 			<string>Building project EyeRest with scheme EyeRest and configuration Release</string>
 			<key>uniqueIdentifier</key>
-			<string>5A8CB5E5-8DD5-4660-A7C5-C97EEE407D82</string>
+			<string>6251031D-C224-4849-9E2B-BBE4C93E4891</string>
 		</dict>
 	</dict>
 </dict>

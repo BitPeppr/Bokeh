@@ -15,6 +15,10 @@
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundleIconName</key>
+    <string>AppIcon</string>
 
     <!-- Hides Dock icon and removes from CMD+Tab -->
     <key>LSUIElement</key>
