@@ -38,11 +38,27 @@ struct MenuBarView: View {
                 .pickerStyle(.menu).frame(width: 90)
             }
 
+            HStack {
+                Text("Duration:").foregroundStyle(.secondary)
+                Picker("", selection: $prefs.breakDurationSeconds) {
+                    Text("15 sec").tag(15)
+                    Text("30 sec").tag(30)
+                    Text("60 sec").tag(60)
+                    Text("2 min").tag(120)
+                    Text("5 min").tag(300)
+                }
+                .pickerStyle(.menu).frame(width: 90)
+            }
+
             Divider()
 
-            Text("Emergency exit during break:\n⌃⌥⌘⇧E")
-                .font(.system(size: 11))
-                .foregroundStyle(.secondary)
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Emergency exit during break:")
+                Text("⌃⌥⌘⇧E (Ctrl+Opt+Cmd+Shift+E)")
+                    .font(.system(size: 12, weight: .medium))
+            }
+            .font(.system(size: 11))
+            .foregroundStyle(.secondary)
 
             Divider()
 
@@ -50,7 +66,7 @@ struct MenuBarView: View {
                 .foregroundStyle(.red)
         }
         .padding(12)
-        .frame(width: 260)
+        .frame(width: 300)
     }
 
     private var formattedNextBreak: String {

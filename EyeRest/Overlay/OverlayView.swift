@@ -31,6 +31,7 @@ struct OverlayView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .ignoresSafeArea()
         .background(Color.clear) // Transparent so blur shows through
     }
 }

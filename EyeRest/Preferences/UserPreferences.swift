@@ -6,7 +6,10 @@ final class UserPreferences: ObservableObject {
     @AppStorage("breakIntervalMinutes") var breakIntervalMinutes: Int = 20 {
         didSet { BreakScheduler.shared.resetSchedule() }
     }
-    @AppStorage("countdownDuration") var countdownDuration: Int = 30
+    @AppStorage("breakDurationSeconds") var breakDurationSeconds: Int = 30 {
+        didSet { BreakScheduler.shared.resetSchedule() }
+    }
+    @AppStorage("countdownDuration") var countdownDuration: Int = 30 // Deprecated, use breakDurationSeconds
     @AppStorage("skipEnabled") var skipEnabled: Bool = false
     @AppStorage("paused") var paused: Bool = false {
         didSet {
@@ -16,6 +19,7 @@ final class UserPreferences: ObservableObject {
     }
 
     var breakInterval: TimeInterval { TimeInterval(breakIntervalMinutes * 60) }
+    var breakDuration: TimeInterval { TimeInterval(breakDurationSeconds) }
 
     private init() {}
 }

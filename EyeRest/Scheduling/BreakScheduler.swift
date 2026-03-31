@@ -14,7 +14,7 @@ final class BreakScheduler: ObservableObject {
     @Published private(set) var nextBreakIn: TimeInterval = 0
 
     var breakInterval: TimeInterval { UserPreferences.shared.breakInterval }
-    var countdownDuration: Int { UserPreferences.shared.countdownDuration }
+    var breakDuration: Int { UserPreferences.shared.breakDurationSeconds }
 
     private var breakDispatchTimer: DispatchSourceTimer?
     private var countdownTimer: Timer?
@@ -66,7 +66,7 @@ final class BreakScheduler: ObservableObject {
     private func beginBreak() {
         cancelDispatchTimer()
         cancelTickTimer()
-        var remaining = countdownDuration
+        var remaining = breakDuration
         state = .breakActive(secondsRemaining: remaining)
 
         countdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
