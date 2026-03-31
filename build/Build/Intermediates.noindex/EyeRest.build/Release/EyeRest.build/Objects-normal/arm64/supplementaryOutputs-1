@@ -1,0 +1,12 @@
+{
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/App/EyeRestApp.swift" : {
+    "abi-baseline-json" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest.abi.json",
+    "const-values" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary.swiftconstvalues",
+    "dependencies" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary.d",
+    "diagnostics" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary.dia",
+    "objc-header" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-Swift.h",
+    "swiftdoc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest.swiftdoc",
+    "swiftmodule" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest.swiftmodule",
+    "swiftsourceinfo" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest.swiftsourceinfo"
+  }
+}

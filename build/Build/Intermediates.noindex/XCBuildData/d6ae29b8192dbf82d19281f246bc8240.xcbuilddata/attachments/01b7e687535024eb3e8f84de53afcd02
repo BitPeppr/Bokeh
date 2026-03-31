@@ -1,0 +1,66 @@
+{
+  "" : {
+    "const-values" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary.swiftconstvalues",
+    "dependencies" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary.d",
+    "diagnostics" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary.dia",
+    "emit-module-dependencies" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary-emit-module.dia",
+    "pch" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRest-primary.swiftdeps"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/App/AppDelegate.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/AppDelegate.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/App/EyeRestApp.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRestApp.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRestApp.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/EyeRestApp.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/Input/InputBlocker.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/InputBlocker.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/InputBlocker.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/InputBlocker.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/MenuBar/MenuBarView.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/MenuBarView.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/MenuBarView.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/MenuBarView.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/Overlay/BlurView.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/BlurView.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/BlurView.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/BlurView.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/Overlay/OverlayManager.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/OverlayManager.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/OverlayManager.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/OverlayManager.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/Overlay/OverlayView.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/OverlayView.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/OverlayView.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/OverlayView.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/Overlay/OverlayWindowController.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/OverlayWindowController.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/OverlayWindowController.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/OverlayWindowController.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/Preferences/UserPreferences.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/UserPreferences.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/UserPreferences.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/UserPreferences.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/EyeRest/Scheduling/BreakScheduler.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/BreakScheduler.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/BreakScheduler.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/BreakScheduler.o"
+  },
+  "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/martinchen/Desktop/Project/eye-rest/build/Build/Intermediates.noindex/EyeRest.build/Release/EyeRest.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}
