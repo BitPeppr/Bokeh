@@ -6,6 +6,10 @@
 	<string>25D2128</string>
 	<key>CFBundleExecutable</key>
 	<string>EyeRest</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.yourname.EyeRest</string>
 	<key>CFBundleName</key>
