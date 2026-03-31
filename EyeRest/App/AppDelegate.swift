@@ -122,9 +122,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func revealAppInFinder() {
         DispatchQueue.main.async {
-            if let url = Bundle.main.bundleURL {
-                NSWorkspace.shared.activateFileViewerSelecting([url])
-            }
+            let url = Bundle.main.bundleURL
+            NSWorkspace.shared.activateFileViewerSelecting([url])
         }
     }
 
