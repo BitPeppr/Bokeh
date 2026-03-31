@@ -1,2 +1,0 @@
-Target dependency graph (1 target)
-Target 'EyeRest' in project 'EyeRest' (no dependencies)
