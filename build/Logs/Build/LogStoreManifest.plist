@@ -48,6 +48,90 @@
 			<key>uniqueIdentifier</key>
 			<string>6251031D-C224-4849-9E2B-BBE4C93E4891</string>
 		</dict>
+		<key>CA8A10FC-3495-4A97-B20D-C4926B476B20</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CA8A10FC-3495-4A97-B20D-C4926B476B20.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>EyeRest project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EyeRest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning project EyeRest with scheme EyeRest and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>796649092.195943</real>
+			<key>timeStoppedRecording</key>
+			<real>796649094.16851497</real>
+			<key>title</key>
+			<string>Cleaning project EyeRest with scheme EyeRest and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>CA8A10FC-3495-4A97-B20D-C4926B476B20</string>
+		</dict>
+		<key>DA0ABF0F-1896-4E32-9E59-380530CC7FC3</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DA0ABF0F-1896-4E32-9E59-380530CC7FC3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>EyeRest project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>EyeRest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project EyeRest with scheme EyeRest and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>796649094.17772996</real>
+			<key>timeStoppedRecording</key>
+			<real>796649126.76445305</real>
+			<key>title</key>
+			<string>Building project EyeRest with scheme EyeRest and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>DA0ABF0F-1896-4E32-9E59-380530CC7FC3</string>
+		</dict>
 	</dict>
 </dict>
 </plist>

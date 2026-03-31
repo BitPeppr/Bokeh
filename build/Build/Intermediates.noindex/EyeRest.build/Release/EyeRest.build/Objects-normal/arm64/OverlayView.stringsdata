@@ -4,14 +4,6 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Skip",
-        "location": {
-          "startingColumn": 28,
-          "startingLine": 27
-        }
-      },
-      {
-        "comment": "",
         "key": "Rest Your Eyes",
         "location": {
           "startingColumn": 22,
@@ -31,7 +23,7 @@
         "key": "%lld",
         "location": {
           "startingColumn": 18,
-          "startingLine": 60
+          "startingLine": 52
         }
       }
     ]
