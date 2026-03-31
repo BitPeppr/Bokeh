@@ -10,7 +10,6 @@ final class UserPreferences: ObservableObject {
         didSet { BreakScheduler.shared.resetSchedule() }
     }
     @AppStorage("countdownDuration") var countdownDuration: Int = 30 // Deprecated, use breakDurationSeconds
-    @AppStorage("skipEnabled") var skipEnabled: Bool = false
     @AppStorage("paused") var paused: Bool = false {
         didSet {
             if paused { BreakScheduler.shared.stop() }

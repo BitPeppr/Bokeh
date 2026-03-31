@@ -21,7 +21,6 @@ struct MenuBarView: View {
 
             Button("Take break now") { scheduler.triggerBreakNow() }
                 .disabled(scheduler.state != .idle)
-            Toggle("Allow skip button", isOn: $prefs.skipEnabled)
             Toggle("Pause schedule", isOn: $prefs.paused)
 
             Divider()

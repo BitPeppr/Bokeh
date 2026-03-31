@@ -21,14 +21,6 @@ struct OverlayView: View {
 
             CountdownRing(scheduler: scheduler)
 
-            // Skip button — optional, appears only after a 5-second delay
-            if UserPreferences.shared.skipEnabled {
-                if case .breakActive(let remaining) = scheduler.state, remaining < 25 {
-                    Button("Skip") { scheduler.endBreakEarly() }
-                        .buttonStyle(SkipButtonStyle())
-                        .transition(.opacity.animation(.easeIn(duration: 0.3)))
-                }
-            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
@@ -64,16 +56,3 @@ struct CountdownRing: View {
     }
 }
 
-struct SkipButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(.system(size: 15, weight: .medium, design: .rounded))
-            .foregroundStyle(.white.opacity(0.7))
-            .padding(.horizontal, 24).padding(.vertical, 10)
-            .background(
-                Capsule().stroke(Color.white.opacity(0.3), lineWidth: 1)
-                    .background(Capsule().fill(Color.white.opacity(
-                        configuration.isPressed ? 0.1 : 0.05)))
-            )
-    }
-}
