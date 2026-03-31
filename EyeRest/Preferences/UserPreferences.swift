@@ -17,6 +17,7 @@ final class UserPreferences: ObservableObject {
             else { BreakScheduler.shared.start() }
         }
     }
+    @AppStorage("hasAskedForLoginItem") var hasAskedForLoginItem: Bool = false
 
     var breakInterval: TimeInterval { TimeInterval(breakIntervalMinutes * 60) }
     var breakDuration: TimeInterval { TimeInterval(breakDurationSeconds) }

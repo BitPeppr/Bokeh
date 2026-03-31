@@ -1,8 +1,11 @@
 import SwiftUI
+import ServiceManagement // Added for SMAppService
 
 struct MenuBarView: View {
     @EnvironmentObject var scheduler: BreakScheduler
     @ObservedObject var prefs = UserPreferences.shared
+    
+    @State private var loginItemEnabled: Bool = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -23,6 +26,21 @@ struct MenuBarView: View {
                 .disabled(scheduler.state != .idle)
             Toggle("Allow skip button", isOn: $prefs.skipEnabled)
             Toggle("Pause schedule", isOn: $prefs.paused)
+
+            Divider()
+
+            Toggle(isOn: $loginItemEnabled) {
+                Text("Launch at Login")
+            }
+            .onChange(of: loginItemEnabled) { newValue in
+                (NSApp.delegate as? AppDelegate)?.toggleLoginItem(enable: newValue)
+            }
+            .onAppear {
+                loginItemEnabled = (NSApp.delegate as? AppDelegate)?.isLoginItemEnabled() ?? false
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .loginItemStatusChanged)) { _ in
+                loginItemEnabled = (NSApp.delegate as? AppDelegate)?.isLoginItemEnabled() ?? false
+            }
 
             Divider()
 
