@@ -1,167 +1,110 @@
 # EyeRest
 
-A macOS menu bar app that reminds you to rest your eyes using the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds.
+A lightweight macOS menu-bar utility that reminds you to rest your eyes using the 20‑20‑20 rule: every 20 minutes, take a short break and look away from the screen.
 
-## Features
+Table of Contents
+- Features
+- Requirements
+- Quick start
+- Build from source
+- Usage
+- Configuration (UserDefaults keys)
+- Developer notes / important files
+- Packaging & distribution
+- Troubleshooting
+- Contributing
+- License & acknowledgments
 
-- 🖥️ **Full-screen blur overlay** covering all displays during breaks
-- ⬆️ **Appears above everything** including full-screen apps and Mission Control spaces
-- ⌨️ **Keyboard shortcut blocking** during breaks (requires Accessibility permission)
-- 🎯 **Flicker-free blur** using static screenshot technology
-- 📺 **Multi-monitor support** — all screens covered simultaneously
-- 👻 **Menu bar only** — no Dock icon or Cmd+Tab presence
-- ⚙️ **Configurable intervals** — 10, 20, 30, 45, or 60 minutes
-- 🔘 **Optional skip button** — can be disabled for discipline
-- 🚨 **Emergency escape** — Ctrl+Option+Cmd+Shift+E during a break
-- 😴 **Smart sleep/wake handling** — resets timer after system wake
+Features
+- Stable, flicker-free full-screen blur overlay (per-screen)
+- Shows above all apps (including full‑screen) using `.screenSaver` window level
+- Keyboard & mouse input blocking during breaks (Accessibility permission required)
+- Emergency-escape chord: Ctrl + Option + Command + Shift + E
+- Multi-monitor support (one overlay per NSScreen)
+- Configurable interval and break duration
 
-## The 20-20-20 Rule
+Requirements
+- macOS 13.0+ (Info.plist minimum)
+- Accessibility permission (for the CGEventTap input blocker)
+- Screen Recording permission may be required on some macOS versions for reliable screenshots
 
-Every 20 minutes, look at something 20 feet away for 20 seconds. This helps reduce eye strain from prolonged screen use.
+Quick start (user)
+1. Download EyeRest.app from Releases (or build from source below).
+2. Copy to /Applications
+3. Open the app and grant Accessibility (and Screen Recording if prompted).
+4. The app runs from the menu bar — use the menu to pause or change interval.
 
-## Requirements
-
-- macOS 13 Ventura or later
-- Accessibility permission (for keyboard blocking during breaks)
-
-## Installation
-
-### Quick Start
-
-1. Download `EyeRest.app` from releases
-2. Drag to Applications folder
-3. Right-click and select "Open" (first time only)
-4. Grant Accessibility permission when prompted
-5. Menu bar icon (👁) appears and breaks start automatically
-
-### Building from Source
+Build from source
+- Open the Xcode project: `open EyeRest.xcodeproj` and build (⌘R)
+- Command-line build (Release):
 
 ```bash
-git clone <repository>
-cd eye-rest
-open EyeRest.xcodeproj
-# Build and run in Xcode (⌘R)
+xcodebuild -project EyeRest.xcodeproj -scheme EyeRest -configuration Release clean build
 ```
 
-## Usage
+Usage
+- Menu bar popover shows next break, lets you trigger a break now, pause the schedule, and change interval/duration.
+- During a break a full-screen static blurred snapshot is shown with a countdown ring.
+- Emergency escape: press Ctrl+Option+Cmd+Shift+E to end a break early.
 
-### Menu Bar Options
+Configuration (UserDefaults)
+The app stores settings in `~/Library/Preferences/<bundle-id>.plist` (example bundle id: `com.yourname.EyeRest`). Use `defaults` to read/write values.
 
-- **Next break in X:XX** — countdown to next break
-- **Take break now** — trigger immediate break
-- **Allow skip button** — show/hide skip button during breaks  
-- **Pause schedule** — temporarily disable automatic breaks
-- **Interval** — choose break frequency (10-60 min)
-- **Emergency exit reminder** — ⌃⌥⌘⇧E chord
+Important keys (as used in the code):
+- `breakIntervalMinutes` (Int) — interval between breaks in minutes (default: 20)
+- `breakDurationSeconds` (Int) — break length in seconds (default: 30)
+- `countdownDuration` (Int) — deprecated but still referenced by the UI countdown ring
+- `paused` (Bool) — pause/resume break scheduling
 
-### Emergency Escape
-
-If you absolutely must exit a break early (emergency call, etc.):
-
-**Press:** `Ctrl + Option + Cmd + Shift + E`
-
-This chord is intentionally difficult to trigger accidentally.
-
-## Technical Details
-
-### Blur Implementation
-EyeRest uses a **screenshot-based blur** that captures the screen once when the break starts, applies a Gaussian blur filter, and displays it as a static image. This eliminates all flickering and provides a stable, smooth overlay. See [BLUR_IMPLEMENTATION.md](BLUR_IMPLEMENTATION.md) for details.
-
-### Window Level
-The overlay runs at `.screenSaver` level (101), above the menu bar and Dock, with `.canJoinAllSpaces` behavior to appear across all Mission Control spaces and full-screen apps.
-
-### Input Blocking
-A `CGEventTap` intercepts keyboard and mouse events during breaks. Requires Accessibility permission. The emergency escape chord (⌃⌥⌘⇧E) is always honored.
-
-## Configuration
-
-Settings are stored in `~/Library/Preferences/com.yourname.EyeRest.plist`. You can also set them via command line:
-
+Examples:
 ```bash
 # Set 30-minute interval
 defaults write com.yourname.EyeRest breakIntervalMinutes -int 30
 
-# Set 20-second countdown
-defaults write com.yourname.EyeRest countdownDuration -int 20
-
-# Enable skip button
-defaults write com.yourname.EyeRest skipEnabled -bool true
+# Set 15-second break duration
+defaults write com.yourname.EyeRest breakDurationSeconds -int 15
 
 # Pause breaks
 defaults write com.yourname.EyeRest paused -bool true
+
+# Quick test: 1-minute interval + 5-second break
+defaults write com.yourname.EyeRest breakIntervalMinutes -int 1
+defaults write com.yourname.EyeRest breakDurationSeconds -int 5
 ```
 
-## Launch at Login
+Developer notes / important files
+- Language: Swift (SwiftUI + AppKit hybrid)
+- Key code locations:
+  - App entry & lifecycle: `EyeRest/App/EyeRestApp.swift`, `EyeRest/App/AppDelegate.swift`
+  - Scheduler: `EyeRest/Scheduling/BreakScheduler.swift`
+  - Overlay windows and blur: `EyeRest/Overlay/OverlayWindowController.swift`, `EyeRest/Overlay/OverlayView.swift`
+  - Input blocking (CGEventTap): `EyeRest/Input/InputBlocker.swift`
+  - Menu bar UI: `EyeRest/MenuBar/MenuBarView.swift`
+  - Preferences wrapper: `EyeRest/Preferences/UserPreferences.swift`
+- Blur implementation:
+  - Captures a screenshot per screen using `CGDisplayCreateImage()` and applies a Core Image `CIGaussianBlur` (radius ≈ 30) to produce a static, flicker-free overlay (see `BLUR_IMPLEMENTATION.md`).
+- Overlay window:
+  - Uses `NSWindow.Level.screenSaver` and collection behavior `.canJoinAllSpaces` to appear above everything.
+- Input blocking:
+  - Uses `CGEvent.tapCreate` at `.cgAnnotatedSessionEventTap` to intercept keyboard/mouse events while a break is active.
 
-### Method 1: System Settings (easiest)
-1. System Settings → General → Login Items
-2. Click "+" and select EyeRest.app
+Packaging & distribution
+- For personal use: copy the built `.app` to `/Applications` and run `xattr -cr /Applications/EyeRest.app` if Gatekeeper blocks it.
+- For public distribution: sign, enable hardened runtime, build a signed DMG, and notarize via Apple's notarization flow. See `PACKAGING.md` for detailed instructions and sample GitHub Actions workflow.
 
-### Method 2: launchd (auto-restart on crash)
+Troubleshooting
+- Accessibility not granted: System Settings → Privacy & Security → Accessibility → Enable EyeRest
+- Screen Recording prompt: EyeRest triggers a check on first launch using ScreenCaptureKit to show the Screen Recording permission dialog. If denied, enable System Settings → Privacy & Security → Screen Recording.
+- Gatekeeper: `xattr -cr /Applications/EyeRest.app` or use System Settings → Privacy & Security → Open Anyway.
+- If the blur flickers, check `BLUR_IMPLEMENTATION.md` and `TROUBLESHOOTING.md` for mitigation strategies (screenshot-based blur is the recommended approach).
 
-Create `~/Library/LaunchAgents/com.yourname.eyerest.plist`:
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Label</key>
-    <string>com.yourname.eyerest</string>
-    <key>ProgramArguments</key>
-    <array>
-        <string>/Applications/EyeRest.app/Contents/MacOS/EyeRest</string>
-    </array>
-    <key>RunAtLoad</key>
-    <true/>
-    <key>KeepAlive</key>
-    <true/>
-</dict>
-</plist>
-```
+Contributing
+- Bug reports and pull requests welcome.
+- Open an issue describing the problem and include macOS version and exact steps to reproduce.
+- Follow code style in the repository; prefer small, focused PRs.
 
-Load it:
-```bash
-launchctl load ~/Library/LaunchAgents/com.yourname.eyerest.plist
-```
+License & acknowledgments
+- License: MIT
+- Built with Swift, SwiftUI, AppKit, Core Image. Thanks to the open-source community for examples and guidance.
 
-## Troubleshooting
-
-### "Cannot be opened because it is from an unidentified developer"
-```bash
-xattr -cr /Applications/EyeRest.app
-```
-
-Or: System Settings → Privacy & Security → Security → "Open Anyway"
-
-### Input blocking not working
-Ensure Accessibility permission is granted:  
-System Settings → Privacy & Security → Accessibility → Enable EyeRest
-
-### App doesn't appear in menu bar
-Check that `LSUIElement` is set in Info.plist (it should be by default)
-
-## Packaging & Distribution
-
-See [PACKAGING.md](PACKAGING.md) for detailed instructions on creating distributable builds, DMGs, notarization, and Homebrew casks.
-
-## Architecture
-
-```
-EyeRest/
-├── App/                   # @main entry, AppDelegate
-├── Scheduling/            # Timer logic, sleep/wake handling  
-├── Overlay/               # Window management, blur, UI
-├── Input/                 # CGEventTap keyboard blocking
-├── MenuBar/               # Menu bar popover UI
-├── Preferences/           # UserDefaults wrapper
-└── Resources/             # Info.plist, entitlements, assets
-```
-
-## License
-
-MIT
-
-## Acknowledgments
-
-Built with Swift, SwiftUI, and AppKit. Blur implementation uses Core Image's Gaussian blur filter applied to screen captures.
+If you want a short checklist or a quick demo script, see `PACKAGING.md` and `BLUR_IMPLEMENTATION.md` for more details.
