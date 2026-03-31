@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>09A47755-AC6C-4DFE-99C1-4F81DEEADDEF</key>
+		<key>1B05ECE5-3A46-41A6-8107-97B9802C25DE</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>09A47755-AC6C-4DFE-99C1-4F81DEEADDEF.xcactivitylog</string>
+			<string>1B05ECE5-3A46-41A6-8107-97B9802C25DE.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -40,13 +40,13 @@
 			<key>signature</key>
 			<string>Cleaning project EyeRest with scheme EyeRest and configuration Release</string>
 			<key>timeStartedRecording</key>
-			<real>796624403.35708106</real>
+			<real>796645717.22044098</real>
 			<key>timeStoppedRecording</key>
-			<real>796624404.09003305</real>
+			<real>796645718.89636898</real>
 			<key>title</key>
 			<string>Cleaning project EyeRest with scheme EyeRest and configuration Release</string>
 			<key>uniqueIdentifier</key>
-			<string>09A47755-AC6C-4DFE-99C1-4F81DEEADDEF</string>
+			<string>1B05ECE5-3A46-41A6-8107-97B9802C25DE</string>
 		</dict>
 		<key>512D17A7-C869-409C-8DC5-5EDD41886216</key>
 		<dict>
@@ -90,7 +90,7 @@
 			<key>uniqueIdentifier</key>
 			<string>512D17A7-C869-409C-8DC5-5EDD41886216</string>
 		</dict>
-		<key>93598E4C-562D-4BD0-A393-4921AB2E9D14</key>
+		<key>97BD2F7B-8D9B-4185-9F1D-BB06D67BF46F</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -99,7 +99,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>93598E4C-562D-4BD0-A393-4921AB2E9D14.xcactivitylog</string>
+			<string>97BD2F7B-8D9B-4185-9F1D-BB06D67BF46F.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -122,57 +122,15 @@
 			<key>schemeIdentifier-sharedScheme</key>
 			<integer>1</integer>
 			<key>signature</key>
-			<string>Cleaning project EyeRest with scheme EyeRest and configuration Release</string>
-			<key>timeStartedRecording</key>
-			<real>796624356.864066</real>
-			<key>timeStoppedRecording</key>
-			<real>796624357.84495604</real>
-			<key>title</key>
-			<string>Cleaning project EyeRest with scheme EyeRest and configuration Release</string>
-			<key>uniqueIdentifier</key>
-			<string>93598E4C-562D-4BD0-A393-4921AB2E9D14</string>
-		</dict>
-		<key>DE1C9CED-2D8A-4741-B644-1B413513975C</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>DE1C9CED-2D8A-4741-B644-1B413513975C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>E</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>1</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>0</integer>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>EyeRest project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>EyeRest</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
 			<string>Building project EyeRest with scheme EyeRest and configuration Release</string>
 			<key>timeStartedRecording</key>
-			<real>796624357.84768295</real>
+			<real>796645718.90370798</real>
 			<key>timeStoppedRecording</key>
-			<real>796624384.53724897</real>
+			<real>796645758.40171003</real>
 			<key>title</key>
 			<string>Building project EyeRest with scheme EyeRest and configuration Release</string>
 			<key>uniqueIdentifier</key>
-			<string>DE1C9CED-2D8A-4741-B644-1B413513975C</string>
+			<string>97BD2F7B-8D9B-4185-9F1D-BB06D67BF46F</string>
 		</dict>
 	</dict>
 </dict>
