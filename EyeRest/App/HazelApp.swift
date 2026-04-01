@@ -1,12 +1,12 @@
 import SwiftUI
 
 @main
-struct EyeRestApp: App {
+struct HazelApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var scheduler = BreakScheduler.shared
 
     var body: some Scene {
-        MenuBarExtra("EyeRest", systemImage: "eye") {
+        MenuBarExtra("Hazel", systemImage: "eye") {
             MenuBarView()
                 .environmentObject(scheduler)
         }

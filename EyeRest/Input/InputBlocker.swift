@@ -6,7 +6,7 @@ private let kEmergencyModifiers: CGEventFlags = [.maskControl, .maskAlternate,
                                                   .maskCommand, .maskShift]
 private let kEmergencyKeyCode: CGKeyCode = 14  // 'E'
 
-private func eyeRestEventCallback(
+private func hazelEventCallback(
     proxy: CGEventTapProxy,
     type: CGEventType,
     event: CGEvent,

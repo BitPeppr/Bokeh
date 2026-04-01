@@ -4,9 +4,9 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleIdentifier</key>
-    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <string>com.yourname.Hazel</string>
     <key>CFBundleName</key>
-    <string>EyeRest</string>
+    <string>Hazel</string>
     <key>CFBundleVersion</key>
     <string>1</string>
     <key>CFBundleShortVersionString</key>

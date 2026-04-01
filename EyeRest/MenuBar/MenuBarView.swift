@@ -61,7 +61,7 @@ struct MenuBarView: View {
 
             Divider()
 
-            Button("Quit EyeRest") { NSApplication.shared.terminate(nil) }
+            Button("Quit Hazel") { NSApplication.shared.terminate(nil) }
                 .foregroundStyle(.red)
         }
         .padding(12)
