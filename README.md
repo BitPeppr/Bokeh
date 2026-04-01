@@ -35,12 +35,37 @@ Quick start (user)
 4. The app runs from the menu bar — use the menu to pause or change interval.
 
 Build from source
-- Open the Xcode project: `open EyeRest.xcodeproj` and build (⌘R)
-- Command-line build (Release):
+
+Prerequisites
+- Xcode (with command-line tools) installed (install with `xcode-select --install` if needed)
+
+Build & install (recommended)
+
+A convenience script is included to clean previous builds, build the Release configuration, and copy the built app into /Applications.
 
 ```bash
-xcodebuild -project EyeRest.xcodeproj -scheme EyeRest -configuration Release clean build
+cd /path/to/eye-rest
+chmod +x ./scripts/build-and-install.sh
+./scripts/build-and-install.sh
 ```
+
+The script may prompt for your password because it uses sudo to copy to /Applications and to perform codesigning/xattr operations.
+
+Manual command-line build (no script)
+
+```bash
+cd /path/to/eye-rest
+xcodebuild -project EyeRest.xcodeproj -scheme EyeRest -configuration Release clean build
+BUILD_APP=$(find ~/Library/Developer/Xcode/DerivedData -path "*/Build/Products/Release/EyeRest.app" -print -quit)
+cp -R "$BUILD_APP" /Applications/
+codesign --force --deep --sign - /Applications/EyeRest.app
+xattr -cr /Applications/EyeRest.app
+```
+
+Build in Xcode
+
+Open `EyeRest.xcodeproj` in Xcode and build/run (⌘R). After installation, grant Accessibility permission in System Settings → Privacy & Security → Accessibility.
+
 
 Usage
 - Menu bar popover shows next break, lets you trigger a break now, pause the schedule, and change interval/duration.
